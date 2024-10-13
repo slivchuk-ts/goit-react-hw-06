@@ -2,9 +2,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectNameFilter, changeFilter } from '../../redux/filtersSlice';
 import s from './SearchBox.module.css'; 
 
-export default function SearchBox() {
+const SearchBox = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(selectNameFilter); 
+  const filter = useSelector(selectNameFilter);
 
   const handleChange = (event) => {
     dispatch(changeFilter(event.target.value));
@@ -22,4 +22,6 @@ export default function SearchBox() {
       />
     </div>
   );
-}
+};
+
+export default SearchBox;

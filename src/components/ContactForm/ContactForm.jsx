@@ -8,7 +8,7 @@ import { nanoid } from 'nanoid';
 import { addContact } from '../../redux/contactsSlice';
 
 
-export default function ContactForm() {
+ const ContactForm=()=> {
     const dispatch = useDispatch();
     const contacts = useSelector(selectContacts);
 
@@ -63,3 +63,5 @@ const validationSchema = Yup.object({
     </Formik>
   );
 };
+
+export default ContactForm;
